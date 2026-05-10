@@ -232,12 +232,6 @@ body {
 
 
 
-
-
-
-
-
-
 /* ============================
    RESUMO DA SOLUÇÃO (AJUSTADO)
    ============================ */
@@ -308,6 +302,65 @@ body {
 
 
 
+.btn-flutuante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 14px 24px;
+  border-radius: 40px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 200, 160, 0.4);
+  
+  /* Escondido por padrão */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-flutuante.visivel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.btn-flutuante:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 200, 160, 0.6);
+}
+
+/* Ajuste para mobile para não cobrir o conteúdo central */
+@media (max-width: 768px) {
+  .btn-flutuante {
+    bottom: 20px;
+    right: 20px;
+    left: 20px; /* No mobile ele vira uma barra no fundo */
+    text-align: center;
+  }
+}
+
+
+
+
+
+.resumo-cta {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.resumo-cta .btn-primary {
+  width: auto;
+  padding: 14px 32px;
+}
 
 
 

@@ -1,5 +1,30 @@
 /* ProtectID — script.js (Front-end conectado ao Node.js) */
 
+
+/* ---- Lógica do Botão Flutuante ---- */
+window.addEventListener('scroll', function() {
+  const btnFlutuante = document.getElementById('btn-flutuante');
+  const heroSection = document.querySelector('.hero');
+  
+  // Mostra o botão após o usuário passar da metade da seção Hero
+  if (window.scrollY > (heroSection.offsetHeight / 2)) {
+    btnFlutuante.classList.add('visivel');
+  } else {
+    btnFlutuante.classList.remove('visivel');
+  }
+  
+  // Esconde o botão quando o usuário chegar lá embaixo no formulário oficial
+  const formulario = document.getElementById('inscricao');
+  const posicaoForm = formulario.getBoundingClientRect().top + window.scrollY;
+  
+  if (window.scrollY > (posicaoForm - 400)) {
+    btnFlutuante.classList.remove('visivel');
+  }
+});
+
+
+
+
 /* ---- Scroll arrow ---- */
 document.getElementById('scroll-hint').addEventListener('click', function (e) {
   e.preventDefault();
