@@ -229,6 +229,90 @@ body {
 .proof-stat p em { font-style: normal; color: var(--accent2); font-weight: 600; }
 .proof-divider { width: 1px; background: var(--border); }
 
+
+
+
+
+
+
+
+
+
+/* ============================
+   RESUMO DA SOLUÇÃO (AJUSTADO)
+   ============================ */
+.resumo-solucao {
+  padding: 80px 24px 20px; /* Reduzi o padding de baixo para 20px */
+  background: var(--bg);
+}
+
+.resumo-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.resumo-inner .section-title {
+  margin-bottom: 30px; /* Título mais próximo do box */
+  text-align: left;
+}
+
+.resumo-box {
+  background: linear-gradient(135deg, rgba(0, 200, 160, 0.05), rgba(0, 132, 255, 0.05));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%; /* Ocupa a largura total do container */
+}
+
+.resumo-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 200, 160, 0.1);
+  color: var(--accent);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resumo-icon svg { width: 32px; height: 32px; }
+
+.resumo-box p {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* AJUSTE NA PRÓXIMA SEÇÃO PARA DIMINUIR O ESPAÇO TOTAL */
+.features {
+  padding-top: 40px !important; /* Força um espaço menor no topo dos cards */
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+  .resumo-solucao { padding: 60px 20px 10px; }
+  .resumo-inner .section-title { text-align: center; }
+  .resumo-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  .resumo-box p { font-size: 1.05rem; }
+  .features { padding-top: 30px !important; }
+}
+
+
+
+
+
+
+
+
 /* ============================
    FEATURES
    ============================ */
