@@ -362,6 +362,7 @@ body {
 .resumo-cta .btn-primary {
   width: auto;
   padding: 14px 32px;
+  text-decoration: none;
 }
 
 
