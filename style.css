@@ -303,6 +303,8 @@ body {
 
 
 .btn-flutuante {
+
+  Display: none; /*Tire esse display todo para testar com o btn flut*/
   position: fixed;
   bottom: 30px;
   right: 30px;
