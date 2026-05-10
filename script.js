@@ -109,7 +109,7 @@ document.querySelectorAll('.duvida-btn').forEach(btn => {
 /* ---- Envia lead pro SEU backend em Node.js ---- */
 async function saveLead(payload) {
   // URL da sua API local. Quando for para produção, você troca para a URL do seu servidor.
-  const URL_API = 'http://localhost:3000/api/leads'; 
+  const URL_API = 'https://securid-server.onrender.com/api/leads'; 
 
   const res = await fetch(URL_API, {
     method: 'POST',
